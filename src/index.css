@@ -1,0 +1,328 @@
+/* constant */
+* {
+  box-sizing: border-box;
+}
+
+/* main body */
+body {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+.extraPaddingPage {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+.extraPaddingContent {
+  padding-left: .5em;
+}
+
+/* link styling */
+/* set the link defaults*/
+a {
+  color: blue;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+}
+.activeGameLink {
+  background-color:#eee;
+  padding: .25em 1em;
+  border: 1px solid #ddd;
+}
+.activeNavLink {
+  background-color: rgba(221, 221, 221, 0.25);
+  padding: .25em 1em;
+  border: 1px solid #ddd;
+}
+
+/* graph styling */
+.graph img {
+  margin-top: 3rem;
+  width: 100%;
+}
+.graph p {
+  margin: 0;
+  padding: 0rem .5rem;
+}
+
+
+/* navbar styling */
+/* navabar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1E90FF;
+  padding: .75rem;
+}
+/* search is on the right */
+nav .searchBox {
+  float: right;
+}
+/* makes sure button and input are aligned */
+nav button {
+  height: 2.5rem;
+  font-size: 1.5rem;
+  padding: .3rem;
+  vertical-align: bottom;
+}
+.hamburger-menu button svg {
+  margin-left: -0.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+.searchBox button svg {
+  margin-bottom: .3rem;
+}
+nav input {
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: .5rem;
+  vertical-align: bottom;
+}
+/* makes sure links are in correct alignment */
+nav ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  padding-top:.5rem;
+}
+/* each item in the links */
+nav li {
+  display: inline;
+  margin-right: 1rem;
+}
+/* each link */
+nav a {
+  color: white;
+}
+/* don't show details yet */
+nav .page-menu {
+  display: none;
+}
+
+
+/* mouse over link and selected link */
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* about.html styling */
+/* set content header box shape */
+h2.about {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  width: 95vw;
+}
+h3.about {
+  padding: 0.3em;
+  border-radius: 0.5em;
+  width: 70vw;
+}
+/* set content header color for the problem description */
+h2.prob_descrp {
+  background-color: #FCB9AA;
+  margin-top: 3.5em;
+}
+h3.prob_descrp {
+  background-color: #FFDBCC;
+}
+/* set content header color for the app description */
+h2.app_descrp {
+  background-color: #55CBCD;
+}
+h3.app_descrp {
+  background-color: #A2E1DB;
+}
+
+/* game cards styling on small screen sizes */
+.game-item {
+  margin: 2rem;
+}
+.game-item img {
+  height: 150px;
+  width: 250px;
+}
+.game-item p {
+  /* top-bottom right-left */
+  padding: 0 1rem;
+  margin: 0;
+}
+.game-item p.details, p.game-descr {
+  display: none;
+}
+.game-item p:nth-last-child(1) {
+  /* top right bottom left */
+  padding: 0rem 1rem .5rem 1rem;
+}
+
+/* for the button */
+#change_button {
+  margin-top: 0.5rem;
+}
+#submit_button {
+  margin-top: 0.5rem;
+}
+/* for feedback */
+.invalid-feedback {
+  margin-bottom: .5rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+/* for the mobile padding */
+main section:nth-child(1) {
+  margin-top: -2.5rem;
+}
+main div.flex-container section:nth-child(1) {
+  margin-top: 4rem;
+}
+/* handles display for complaint form */
+#complaint {
+  display: inline;
+}
+
+/* implements mini-charts at smaller screen sizes (rather than the regular charts that have more games displayed) */
+.regularCharts {
+  display: none;
+}
+
+/* media queries to handle content display at various screen sizes */
+/* For small screens (and larger): remove the hamburger menu at the top left of the webpage
+ and replace it with a textual page menu, displays game's year and platform info (in addition
+ to the game's title and genre, which are already displayed at any screen size) */
+@media (min-width: 598px) {
+  /* left flex column styling */
+  p.comment-desc {
+      display: none;
+  }
+  /* middle flex column styling (game cards) */
+  .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .game-item {
+      flex: 0 0 250px;
+      background-color: white;
+      margin: .5rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.16),
+                  0 1px 3px rgba(0,0,0,0.23);
+  }
+  .game-item img {
+      border-radius: 10px 10px 0 0;
+  }
+
+  /* about.html styling */
+  /* set content header box shape */
+  h2.about {
+      width: 50vw;
+  }
+  h3.about {
+      width: 30vw;
+  }
+
+  nav .hamburger-menu {
+      display: none;
+  }
+  nav .page-menu {
+      display: block;
+  }
+  .game-item p {
+      font-size: 1em;
+  }
+  .game-item p.name {
+      font-weight: bold;
+  }
+  .game-item p.details {
+     display: flex;
+  }
+}
+
+/* For medium screens: add game descriptions, italicize and bold game genre, year and platform,
+ and make the title of the game larger */
+@media (min-width: 768px) {
+  /* navbar styling */
+  nav {
+      padding: .75rem;
+  }
+  /* main body - flex column styling */
+  .flex-container {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 3em;
+  }
+  .flex-column {
+      padding: 1em;
+  }
+  .flex-column.col-a {
+      flex-basis: 200px;  /* set to some arbitary amount for now */
+  }
+  .flex-column.col-b {
+      flex: 1 0 500px;
+      /* background-color: #eee; */ /* could we add like column lines instead?*/
+  }
+  .flex-column.col-c {
+      flex-basis: 500px;
+  }
+  /* for the mobile padding */
+  main section:nth-child(1), main div.flex-container section:nth-child(1) {
+      margin-top: 0;
+  }
+  .extraPaddingContent {
+      padding-left: 0em;
+  }
+  /* about.html styling */
+  /* set content header box shape */
+  h2.prob_descrp {
+      margin-top: 2.2em;
+  }
+  h2.about {
+      width: 50vw;
+  }
+  h3.about {
+      width: 30vw;
+  }
+
+  p.comment-desc {
+      display: flex;
+  }
+
+  .game-item p.name {
+      font-size: 1.5em;
+  }
+  .game-item p.genre, p.details {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 1.0em;
+  }
+  .game-item p.game-descr {
+      display: flex;
+      font-size: 0.8em;
+  }
+}
+
+/* For large screens: increase font size of all text in the middle (game) column */
+@media (min-width: 992px) {
+  .game-item p.name {
+      font-size: 1.8em;
+  }
+  .game-item p.genre, p.details {
+      font-size: 1.2em;
+  }
+  .game-item p.game-descr {
+      font-size: 1.0em;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* displays the larger charts (more games displayed) instead of the mini-charts */
+  .miniCharts {
+      display: none;
+  }
+  .regularCharts {
+      display: grid;
+  }
+}

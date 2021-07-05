@@ -1,0 +1,208 @@
+/* constant (entire website) */
+* {
+  box-sizing: border-box;
+}
+
+/* main body */
+body {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+/* text */
+/* makes background text white */
+h1, p {
+    background-color: white;
+}
+
+h2.name {
+  color: goldenrod;
+  background-color: #163191;
+}
+
+
+.extraPaddingPage {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+.extraPaddingContent {
+  padding-left: .5em;
+}
+
+/* NavBar style */
+.nav {
+    background-color: #163191;
+    position: fixed;
+    overflow: visible;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  /* makes sure button and input are aligned */
+  .nav button {
+    background-color: inherit;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    padding: .3rem;
+    vertical-align: bottom;
+  }
+  /* .hamburger-menu button svg {
+    background-color: #163191;
+    margin-left: -0.5rem;
+    color: white;
+    font-size: 1.5rem;
+  } */
+  .nav input {
+    background-color: inherit;
+    height: 2.5rem;
+    font-size: 1rem;
+    padding: .5rem;
+    vertical-align: bottom;
+  }
+  /* makes sure links are in correct alignment */
+.nav ul {
+    background-color: #163191;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    padding-top:.5rem;
+  }
+  /* each item in the links */
+  .nav li {
+    background-color: #163191;
+    display: inline;    
+    margin-right: 1rem;
+  }
+  /* each link */
+ .nav a {
+    background-color: #163191;
+    color: white;
+  }
+
+/* link styling */
+/* set the link defaults*/
+a {
+    color: blue;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+  }
+  .activeNavLink {
+    background-color: rgba(221, 221, 221, 0.25);
+    padding: .25em 1em;
+    border: 1px solid #ddd;
+  }
+  
+  /* mouse over link and selected link */
+  a:hover, a:active {
+    text-decoration: underline;
+  }
+
+
+/* main body - flex column styling */
+.flex-container {
+    overflow: hidden;
+    background-color: #41A4FF;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8.9em;
+    flex-grow:inherit;
+}
+.flex-col-a {
+    flex: 1;
+}
+.flex-col-b {
+    background-color: white;
+    flex: 6;
+    height: 100%;
+    position: relative;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.flex-col-c {
+    flex: 1;
+}
+
+/* main header of each page styling */
+.header {
+  text-decoration: underline;
+}
+
+/* experience logo styling */
+.fredhutch-logo {
+  height: 60px;
+  width: 240px;
+}
+.ischool-logo {
+  height: 60px;
+  width: 240px;
+}
+.tantockseng-logo {
+  height: 60px;
+  width: 240px;
+}
+.codingwithkids-logo {
+  height: 60px;
+  width: 120px;
+}
+
+/* inner flex container styling */
+.inner-flex-container {
+    background-color: white;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+.inner-flex-col-a {
+  padding-right: 2em;
+  flex: 1;
+}
+.inner-flex-col-b {
+  padding-left: 2em;
+  flex: 1;
+}
+
+/* image styling */
+.hobby-images img {
+    background-color: white;
+    margin-left: 7.35vw;
+    margin-right: 7.35vw;
+    height: 100px;
+    width: 100px;
+}
+
+.seattle-image {
+    height: 200px;
+    width: 500px;
+}
+
+.burger-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.laptop-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.tree-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.tennis-icon {
+  height: 100px;
+  width: 100px;
+}
+
+/* .tennis {
+  height: 50px;
+  width: 50px;
+} */
+
+
+
