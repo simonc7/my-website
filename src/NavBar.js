@@ -31,8 +31,9 @@ export function NavBarSection() {
   function NavLinks() {
     return (
       <ul>
-        <li><h2 className="name">Simon Chow</h2></li>
-        <li>
+        <h2 className="name">Simon Chow</h2>
+        {/* <li><h2 className="name">Simon Chow</h2></li> */}
+        {/* <li>
           <NavLink to="/home" isActive={(match, location) => {
             if (location.pathname === "/home" | location.pathname === "/gameplay") {
               return true;
@@ -46,7 +47,7 @@ export function NavBarSection() {
         </li>
         <li>
           <NavLink exact to="/projects" activeClassName="activeNavLink">Projects</NavLink>
-        </li>
+        </li> */}
     </ul>
     )
   }

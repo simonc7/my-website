@@ -36,80 +36,77 @@ h2.name {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem;
+    /* padding was previously 1.5rem with nav links */
+    padding: 0rem; 
   }
   /* makes sure button and input are aligned */
-  .nav button {
+  /* .nav button {
     background-color: inherit;
     height: 2.5rem;
     font-size: 1.5rem;
     padding: .3rem;
     vertical-align: bottom;
-  }
-  /* .hamburger-menu button svg {
-    background-color: #163191;
-    margin-left: -0.5rem;
-    color: white;
-    font-size: 1.5rem;
   } */
-  .nav input {
+  /* .nav input {
     background-color: inherit;
     height: 2.5rem;
     font-size: 1rem;
     padding: .5rem;
     vertical-align: bottom;
-  }
+  } */
   /* makes sure links are in correct alignment */
-.nav ul {
+  /* .nav ul {
     background-color: #163191;
     display: inline-block;
     padding: 0;
     margin: 0;
     padding-top:.5rem;
-  }
+  } */
   /* each item in the links */
-  .nav li {
+  /* .nav li {
     background-color: #163191;
     display: inline;    
     margin-right: 1rem;
-  }
+  } */
   /* each link */
- .nav a {
+ /* .nav a {
     background-color: #163191;
     color: white;
-  }
+  } */
 
 /* link styling */
 /* set the link defaults*/
-a {
+   /* a {
     color: blue;
     font-weight: bold;
     font-style: normal;
     text-decoration: none;
-  }
-  .activeNavLink {
+  } */
+  /* .activeNavLink {
     background-color: rgba(221, 221, 221, 0.25);
     padding: .25em 1em;
     border: 1px solid #ddd;
-  }
+  } */
   
   /* mouse over link and selected link */
-  a:hover, a:active {
+  /* a:hover, a:active {
     text-decoration: underline;
-  }
+  }  */
 
 
 /* main body - flex column styling */
 .flex-container {
-    overflow: hidden;
-    background-color: #41A4FF;
-    height: 100vh;
+    overflow-x: hidden;
+    /* background-color: #41A4FF; */
+    height: 79vh;
     display: flex;
     flex-direction: row;
-    margin-top: 8.9em;
+    /* margin top previously 8.9 */
+    margin-top: 4.9em;
     flex-grow:inherit;
 }
 .flex-col-a {
+    /* background-color: #41A4FF; */
     flex: 1;
 }
 .flex-col-b {
@@ -121,6 +118,7 @@ a {
     padding-right: 1em;
 }
 .flex-col-c {
+    /* background-color: #41A4FF; */
     flex: 1;
 }
 
@@ -150,17 +148,19 @@ a {
 /* inner flex container styling */
 .inner-flex-container {
     background-color: white;
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    margin-top: 2em;
+    /*margin-top previously 2em*/
+    margin-top: 0em;
 }
 .inner-flex-col-a {
   padding-right: 2em;
   flex: 1;
 }
 .inner-flex-col-b {
+  overflow-y: hidden;
   padding-left: 2em;
   flex: 1;
 }
